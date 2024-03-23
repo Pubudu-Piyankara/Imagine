@@ -23,7 +23,7 @@ export const connectDB = async () => {
     
         cached.promise = cached.promise || 
         mongoose.connect(db, 
-             {dbName:'EAGER-Imagine', bufferCommands: false});
+             {dbName:'imagine', bufferCommands: false});
        
     
     cached.connection = await cached.promise;
