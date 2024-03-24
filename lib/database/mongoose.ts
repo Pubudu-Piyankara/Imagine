@@ -19,12 +19,9 @@ export const connectDB = async () => {
     }
 
     if (!db) throw new Error("MONGODB_URL is not defined");
-
-    
-        // cached.promise = cached.promise || 
-        mongoose.connect(db, { dbName: 'imagine', bufferCommands: false })
-    .then(() => console.log("Connected to MongoDB"))
-    .catch(err => console.error("MongoDB connection error:", err));
+        cached.promise = cached.promise || 
+        mongoose.connect(db, 
+             {dbName:'imagine', bufferCommands: false});
        
     
     cached.connection = await cached.promise;
