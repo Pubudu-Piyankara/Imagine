@@ -336,9 +336,9 @@
   }
 
   /* TransformationForm Component */
-  .prompt-field {
+  /* .prompt-field {
     @apply flex flex-col gap-5 lg:flex-row lg:gap-10;
-  }
+  } */
 
   .media-uploader-field {
     @apply grid h-fit min-h-[200px] grid-cols-1 gap-5 py-4 md:grid-cols-2;
