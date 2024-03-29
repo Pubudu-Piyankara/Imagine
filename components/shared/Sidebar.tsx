@@ -54,7 +54,7 @@ const Sidebar = () => {
                   <li
                     key={link.route}
                     className={`flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-slate-300 hover:shadow-inner group ${
-                      isActive ? "bg-black-gradient text-white" : "text-gray-900"
+                      isActive ? "bg-[#4743E0]  text-white hover:text-[#4743E0]" : "text-gray-900"
                     } `}
                   >
                     <Link className="p-16-semibold flex size-full gap-4 p-4" href={link.route}>
@@ -63,7 +63,7 @@ const Sidebar = () => {
                         alt={link.label}
                         width={24}
                         height={24}
-                        className={`${isActive && " brightness-20"}`}
+                        className={`${isActive && "text-white brightness-20"}`}
                       />
                       {link.label}
                     </Link>
@@ -77,7 +77,7 @@ const Sidebar = () => {
           </SignedIn>
 
           <SignedOut>
-            <Button asChild className="button bg-black-gradient bg-cover">
+            <Button asChild className="button bg-blue-600 bg-cover">
               <Link href="/sign-in">Log In</Link>
             </Button>
           </SignedOut>
