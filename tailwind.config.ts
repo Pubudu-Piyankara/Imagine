@@ -23,12 +23,12 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        blue: {
-          50: "#E6F7FF",
-          100: "#C5FFF8",
-          200: "#96EFFF",
-          400: "#5FBDFF",
-          500: "#7B66FF",
+        gray: {
+          50: "#C0C0C0",
+          100: "#A0A0A0",
+          200: "#808080",
+          400: "#606060",
+          
          
           
         },
@@ -74,7 +74,7 @@ module.exports = {
         "blue-gradient": "url('/assets/images/gradient-bg.svg')",
         "black-gradient": "url('/assets/images/black-gradient.svg')",
         banner: "url('/assets/images/banner-bg.png')",
-        banner1: "url('/assets/images/back.png')",
+        banner1: "url('/assets/images/back.jpg')",
         banner3 : "url('/assets/images/banner3.jpg')",
         banner2 : "url('/assets/images/banner.jpg')",
       },

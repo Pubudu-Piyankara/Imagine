@@ -67,7 +67,7 @@ const MediaUploader = ({
             <>
               <div className="cursor-pointer overflow-hidden rounded-[10px]">
                 <CldImage
-                  className="h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-blue-100/20 object-cover p-2"
+                  className="h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-gray-100/20 object-cover p-2"
                   width={getImageSize(type, image, "width")}
                   height={getImageSize(type, image, "height")}
                   src={publicId}
@@ -79,7 +79,7 @@ const MediaUploader = ({
             </>
           ) : (
             <div
-              className="flex-center flex h-72 cursor-pointer flex-col gap-5 rounded-md border border-dashed bg-blue-100/20 shadow-inner"
+              className="flex-center flex h-72 cursor-pointer flex-col gap-5 rounded-md border border-dashed bg-gray-100/20 shadow-inner"
               onClick={() => open()}
             >
               <div className="rounded-md bg-white  p-5 shadow-sm shadow-blue-200/50">

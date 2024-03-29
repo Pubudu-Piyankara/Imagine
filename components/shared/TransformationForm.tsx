@@ -220,6 +220,7 @@ const TransformationForm = ({
           name="title"
           render={({ field }) => <Input {...field} placeholder="Title" />}
           formLabel="Title"
+          className="pt-10 w-72 rounded-full"
         />
 
         {type === "fill" && (
@@ -227,7 +228,7 @@ const TransformationForm = ({
             control={form.control}
             name="aspectRatio"
             formLabel="Aspect Ratio"
-            className="w-full"
+            className="w-96"
             render={({ field }) => (
               <Select
                 onValueChange={(value) =>
@@ -242,7 +243,7 @@ const TransformationForm = ({
                     <SelectItem
                       key={key}
                       value={key}
-                      className="py-3 cursor-pointer hover:bg-blue-100"
+                      className="py-3 cursor-pointer hover:bg-gray-400"
                     >
                       {aspectRatioOptions[key as AspectRatioKey].label}
                     </SelectItem>
@@ -285,7 +286,7 @@ const TransformationForm = ({
                 render={({ field }) => (
                   <Input
                     value={field.value}
-                    className="input-field"
+                    className=""
                     onChange={(e) =>
                       onInputHandler(
                         "color",
@@ -301,7 +302,7 @@ const TransformationForm = ({
           </div>
         )}
 
-        <div className="grid h-fit min-h-[200px] grid-cols-1 gap-5 py-4 md:grid-cols-2">
+        <div className="grid h-fit min-h-[200px] grid-cols-2 gap-5 py-4 md:grid-cols-2">
           <CustomField
             className="flx flex-col"
             control={form.control}
@@ -315,7 +316,7 @@ const TransformationForm = ({
                 type={type}
               />
             )}
-            formLabel="Public ID"
+            formLabel=""
           />
           <TransformImage
             image={image}
@@ -328,10 +329,10 @@ const TransformationForm = ({
           />
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-row justify-end gap-4">
           <Button
             type="button"
-            className="submit-button capitalize"
+            className="bg-blue-600 bg-cover rounded-full py-4 px-6 p-16-semibold h-[50px] w-72 md:h-[54px] capitalize hover:bg-blue-900"
             disabled={isTransforming || newTransform === null}
             onClick={onTransformHandler}
           >
@@ -339,7 +340,7 @@ const TransformationForm = ({
           </Button>
           <Button
             type="submit"
-            className="submit-button capitalize"
+            className="bg-blue-600 bg-cover rounded-full py-4 px-6 p-16-semibold h-[50px] w-72 md:h-[54px] capitalize hover:bg-blue-900"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Save Image"}

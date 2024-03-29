@@ -1,3 +1,4 @@
+"use client"
 import { dataUrl, debounce, download, getImageSize } from "@/lib/utils";
 import { CldImage, getCldImageUrl } from "next-cloudinary";
 import { PlaceholderValue } from "next/dist/shared/lib/get-img-props";
@@ -47,7 +48,7 @@ const TransformImage = ({ image, type, title, transformationConfig, isTransformi
             alt={image.title}
             sizes={"(max-width: 767px) 100vw, 50vw"}
             placeholder={dataUrl as PlaceholderValue}
-            className="transformed-image"
+            className="h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-slate-500 object-cover p-2"
             onLoad={() => {
               setIsTransforming && setIsTransforming(false);
             }}
@@ -60,7 +61,7 @@ const TransformImage = ({ image, type, title, transformationConfig, isTransformi
           />
 
           {isTransforming && (
-            <div className="transforming-loader">
+            <div className="flex-center absolute left-[50%] top-[50%] size-full -translate-x-1/2 -translate-y-1/2 flex-col gap-2 rounded-[10px] border bg-dark-700/90">
               <Image 
                 src="/assets/icons/spinner.svg"
                 width={50}
@@ -72,7 +73,7 @@ const TransformImage = ({ image, type, title, transformationConfig, isTransformi
           )}
         </div>
       ): (
-        <div className="transformed-placeholder">
+        <div className="flex-center p-14-medium h-auto min-h-72 flex-col gap-5 rounded-[16px] border border-dashed bg-gray-100/20 shadow-inner">
           Transformed Image
         </div>
       )}

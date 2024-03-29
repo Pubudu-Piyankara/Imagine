@@ -12,11 +12,11 @@ const Sidebar = () => {
   return (
     <aside className="hidden h-screen w-72 bg-white p-5 shadow-md shadow-blue-200/50 lg:flex">
       <div className="flex size-full flex-col gap-4">
-        <Link href="/" className="sidebar-logo">
+        <Link href="/" className="flex items-center gap-2 md:py-2">
           <Image
-            src="/assets/logo gold.png"
+            src="/assets/images/logo.png"
             alt="EAGER"
-            width={100}
+            width={200}
             height={100}
           />
         </Link>
@@ -29,8 +29,8 @@ const Sidebar = () => {
                 return (
                   <li
                     key={link.route}
-                    className={`flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-blue-50 hover:shadow-inner group ${
-                      isActive ? "bg-black-gradient text-white" : "text-gray-900"
+                    className={`flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-blue-300/50 hover:shadow-inner group ${
+                      isActive ? "bg-[#4743E0]  text-white hover:text-[#4743E0]"  : "text-gray-900"
                     } `}
                   >
                     <Link className="p-16-semibold flex size-full gap-4 p-4" href={link.route}>
@@ -39,7 +39,7 @@ const Sidebar = () => {
                         alt={link.label}
                         width={24}
                         height={24}
-                        className={`${isActive && " brightness-20"}`}
+                        className={`${isActive && "text-white brightness-20"}`}
                       />
                       {link.label}
                     </Link>
@@ -53,8 +53,8 @@ const Sidebar = () => {
                 return (
                   <li
                     key={link.route}
-                    className={`flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-blue-50 hover:shadow-inner group ${
-                      isActive ? "bg-blue-gradient text-white" : "text-gray-900"
+                    className={`flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-slate-300 hover:shadow-inner group ${
+                      isActive ? "bg-black-gradient text-white" : "text-gray-900"
                     } `}
                   >
                     <Link className="p-16-semibold flex size-full gap-4 p-4" href={link.route}>

@@ -7,7 +7,7 @@ export const navLinks = [
       icon: "/assets/icons/home.svg",
     },
     {
-      label: "Image Restore",
+      label: "Image Regenerate",
       route: "/transformation/add/restore",
       icon: "/assets/icons/image.svg",
     },
@@ -37,7 +37,7 @@ export const navLinks = [
       icon: "/assets/icons/profile.svg",
     },
     {
-      label: "Buy Credits",
+      label: "Purchase Credits",
       route: "/credits",
       icon: "/assets/icons/bag.svg",
     },
