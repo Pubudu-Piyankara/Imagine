@@ -68,7 +68,7 @@ const CardColllection = ({
           <PaginationContent className="flex w-full">
             <Button
               disabled={Number(page) <= 1}
-              className="collection-btn"
+              className="button w-32 bg-blue-600 bg-cover text-white"
               onClick={() => onPageChange("prev")}
             >
               <PaginationPrevious className="hover:bg-transparent hover:text-white" />
