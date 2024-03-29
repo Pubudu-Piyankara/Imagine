@@ -21,7 +21,7 @@ const SideNavbar = () => {
     <header className="flex flex-row justify-between flex-between fixed h-16 w-full border-b-2 border-gray-100 bg-white p-5 lg:hidden">
       <Link href="/" className="flex items-center gap-2 md:py-2">
         <Image
-          src="/assets/logo gold.png"
+          src="/assets/images/logo.png"
           alt="EAGER"
           width={100}
           height={100}
@@ -46,7 +46,7 @@ const SideNavbar = () => {
             <SheetContent className="bg-white sm:w-64">
               <>
                 <Image
-                  src="/assets/logo gold.png"
+                  src="/assets/images/logo.png"
                   alt="logo"
                   width={100}
                   height={100}
