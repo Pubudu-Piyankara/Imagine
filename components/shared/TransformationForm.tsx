@@ -325,7 +325,7 @@ const TransformationForm = ({
             // transformationConfig={null}
             isTransforming={isTransforming}
             setIsTransforming={setIsTransforming}
-            transformationConfig={transformConfig}
+            transformationConfig={transformConfig as Transformations}
           />
         </div>
 
